@@ -1,0 +1,3 @@
+# LinkShortener
+
+docker-compose build
