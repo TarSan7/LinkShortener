@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProcessLinkRequest;
 use App\Services\ShortenLinkService;
-use Exception;
 use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Foundation\Application;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Log;
@@ -23,9 +23,9 @@ class LinkShortenerController extends Controller
     }
 
     /**
-     * @return \Illuminate\Contracts\Foundation\Application|Factory|\Illuminate\Contracts\View\View|Application
+     * @return \Illuminate\Contracts\Foundation\Application|Factory|View|Application
      */
-    public function start(): \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|Application
+    public function start(): \Illuminate\Contracts\Foundation\Application|Factory|View|Application
     {
         $links = $this->linkService->getLinks();
 
